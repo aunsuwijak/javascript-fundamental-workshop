@@ -1,7 +1,7 @@
 import { promiseSum, getPokemonDataPromise } from "../exercises/09";
 
 describe("09", () => {
-  test("should resolved fetch promise correctly", () => {
+  test("should resolved fetch promise correctly", (done) => {
     const data = { base_experience: 101, height: 3, weight: 40 };
 
     expect.assertions(3);
@@ -9,6 +9,7 @@ describe("09", () => {
       expect(pokemonData.base_experience).toBe(data.base_experience);
       expect(pokemonData.height).toBe(data.height);
       expect(pokemonData.weight).toBe(data.weight);
+      done()
     });
   });
 

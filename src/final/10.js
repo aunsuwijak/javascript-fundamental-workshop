@@ -1,7 +1,7 @@
 import { getPokemonData } from "../services";
 
 async function getPokemonDataAsync() {
-  const { base_experience, height, weight } = await getPokemonDataAsync();
+  const { base_experience, height, weight } = await getPokemonData();
   return { base_experience, height, weight };
 }
 
